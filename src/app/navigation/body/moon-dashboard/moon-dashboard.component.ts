@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'moon-dashboard',
   templateUrl: './moon-dashboard.component.html',
-  styleUrls: ['./moon-dashboard.component.css']
+  styleUrls: ['./moon-dashboard.component.scss']
 })
 export class MoonDashboardComponent {
   cards = [
@@ -12,4 +12,5 @@ export class MoonDashboardComponent {
     { title: 'Contact', cols: 1, rows: 2 },
     { title: 'Blog', cols: 1, rows: 1 }
   ];
+
 }

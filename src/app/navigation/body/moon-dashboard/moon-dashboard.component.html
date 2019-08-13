@@ -2,7 +2,7 @@
 
 <div class="grid-container">
 
-  <mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-list cols="2" >
 
 
     <mat-grid-tile [colspan]=2 [rowspan]=1>
@@ -20,13 +20,21 @@
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
+        <mat-card-content fxLayout="row" >
 
-<div>
-    Hey this is a test 
+          <div *ngFor="let card of cards" class="image-container" >
+              <img src="../../../../assets/Images/Events/Day Out of Time photos/20638278_1592305720833379_2480740048536224283_n.jpg" alt="">
+          </div>
 
-  <img src="../../../../assets/Images/Events/Day Out of Time photos/20638278_1592305720833379_2480740048536224283_n.jpg" alt="">
+        </mat-card-content>
+        <!-- <div >
+          <div class="image-container">
+              <img src="./assets/Images/Events/Day Out of Time photos/20638278_1592305720833379_2480740048536224283_n.jpg" alt="">
+          </div>
+        </div> -->
 
-</div>
+
+
       </mat-card>
     </mat-grid-tile>
 

@@ -24,3 +24,16 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+$dimensions: 50px;
+
+.image-container{
+  // width: 50%;
+  margin: 0 auto;
+  width: $dimensions;
+  height: $dimensions;
+  background-color: red;
+  img{
+    height: 100%;
+  }
+}
