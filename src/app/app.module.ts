@@ -9,14 +9,7 @@ import { MyOwnCustomMaterialModule } from './modules/MyMaterialModule';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SideNavComponent } from './navigation/side-nav/side-nav.component';
-import { BodyComponent } from './navigation/body/body.component';
 import { FooterComponent } from './navigation/footer/footer.component';
-import { HomeComponent } from './navigation/body/home/home.component';
-import { AboutComponent } from './navigation/body/about/about.component';
-import { ContactComponent } from './navigation/body/contact/contact.component';
-import { BlogComponent } from './navigation/body/blog/blog.component';
-import { GalacticCommunityComponent } from './navigation/body/galactic-community/galactic-community.component';
-import { MoonDashboardComponent } from './navigation/body/moon-dashboard/moon-dashboard.component';
 import { MoonNavComponent } from './navigation/moon-nav/moon-nav.component';
 
 import {
@@ -24,6 +17,17 @@ import {
 } from '@angular/material';
 import { PhotoGalleryComponent } from './generic/photo-gallery/photo-gallery.component';
 import { TestComponent } from './schematic/test/test.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BodyComponent } from './navigation/pages/body.component';
+import { HomeComponent } from './navigation/pages/home/home.component';
+import { AboutComponent } from './navigation/pages/about/about.component';
+import { ContactComponent } from './navigation/pages/contact/contact.component';
+import { BlogComponent } from './navigation/pages/blog/blog.component';
+import { GalacticCommunityComponent } from './navigation/pages/galactic-community/galactic-community.component';
+import { MoonDashboardComponent } from './navigation/pages/moon-dashboard/moon-dashboard.component';
+import { CosmoVisionComponent } from './navigation/pages/cosmo-vision/cosmo-vision.component';
+import { EventsComponent } from './navigation/pages/events/events.component';
+import { MoondrumCommunityComponent } from './navigation/pages/moondrum-community/moondrum-community.component';
 
 
 @NgModule({
@@ -42,6 +46,9 @@ import { TestComponent } from './schematic/test/test.component';
     MoonNavComponent,
     PhotoGalleryComponent,
     TestComponent,
+    CosmoVisionComponent,
+    EventsComponent,
+    MoondrumCommunityComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,9 @@ import { TestComponent } from './schematic/test/test.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule, 
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

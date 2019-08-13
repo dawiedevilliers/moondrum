@@ -1,10 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport="true"
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
@@ -15,20 +11,30 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        
-        >
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>{{title}}</span>
+
+      <div class="links-container" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+        <p [routerLink]="['/home']">Mothership</p>
+        <p [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
+        <p [routerLink]="['/events']">Events</p>
+        <p>Connect</p>
+        <p>Blog</p>
+        <p [routerLink]="['/moondrum-community']">MoonDrum Community</p>
+        <p>The Moon Shop</p>
+        <p>Portfolio</p>
+      </div>
+
     </mat-toolbar>
-    
-    
-    <moon-dashboard></moon-dashboard>
+
+    <router-outlet>
+
+    </router-outlet>
+
+
+    <!-- <moon-dashboard></moon-dashboard> -->
 
   </mat-sidenav-content>
 </mat-sidenav-container>
