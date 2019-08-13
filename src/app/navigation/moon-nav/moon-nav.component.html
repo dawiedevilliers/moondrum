@@ -20,18 +20,23 @@
         <p [routerLink]="['/home']">Mothership</p>
         <p [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
         <p [routerLink]="['/events']">Events</p>
-        <p>Connect</p>
-        <p>Blog</p>
+        <!-- <p>Connect</p>
+        <p>Blog</p> -->
         <p [routerLink]="['/moondrum-community']">MoonDrum Community</p>
-        <p>The Moon Shop</p>
-        <p>Portfolio</p>
+        <!-- <p>The Moon Shop</p>
+        <p>Portfolio</p> -->
       </div>
 
     </mat-toolbar>
 
-    <router-outlet>
 
-    </router-outlet>
+    <div class="router-container">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+
+
 
 
     <!-- <moon-dashboard></moon-dashboard> -->
