@@ -1,0 +1,23 @@
+#header-container {
+
+  background-color: black;
+
+  .links-container {
+    width: 100%;
+
+    p {
+      cursor: pointer;
+      color: white;
+      font-size: 22px;
+    }
+
+  }
+
+  .title-container {
+    span {
+      margin: 10px 0;
+      color: white;
+      font-size: 30px;
+    }
+  }
+}

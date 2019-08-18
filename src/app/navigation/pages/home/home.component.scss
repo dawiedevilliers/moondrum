@@ -1,17 +1,23 @@
-.home-container {
-    // width: 100%;
-    // height: 100%;
-    // background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
-    // background-size: 100%;
-    width: 100%;
-    background-size: 114%;
-    background-position-x: -150px;
-    background-position-y: -185px;
-    height: -webkit-fill-available;
-    background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
-    background-color: black;
+// .home-container {
+//     width: 100%;
+//     background-size: 114%;
+//     background-position-x: -150px;
+//     background-position-y: -185px;
+//     height: -webkit-fill-available;
+//     background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
+//     background-color: black;
+//     position: relative;
+// }
+
+#main-scene {
+    background-size: 2000px;
+    width: 100%; // height: 100%;
     position: relative;
-}
+    // background-color: #001c2b;
+    height: 100vh;
+    min-height: 900px;
+    position: relative;
+  }
 
 #flower {
     position: absolute;
@@ -58,3 +64,31 @@
         font-family: 'Gracetians';
     }
 }
+
+.bannerHome {
+    // min-height: 950px;
+    // height: 100vh;
+    // background-position: 50% 10%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute; // background-color: #001c2b;
+    -webkit-animation: banner-animation normal 2s, fade-in normal 2s;
+    animation: banner-animation normal 2s, fade-in normal 2s; // background-image: none;
+
+  }
+
+  .animated-background {
+    background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
+    background-size: cover;
+    // background-size: 2000px;
+    // background-position: 50% 10%;
+    transition: height 0.4s ease-in;
+    background-repeat: no-repeat;
+    // background-color: #091e35;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // animation: banner-animation normal 2s, fade-in normal 2s;
+    // transform: scale(1.1);
+  }

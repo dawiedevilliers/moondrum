@@ -1,13 +1,27 @@
-<!-- <div>
-  <header fxLayout="row">
-    <div>Home</div>
+<div id="header-container" fxLayout="row" fxLayoutAlign="center center">
 
-    <div>About</div>
 
-    <div>Contact</div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <div class="title-container">
+      <span>Moon</span>
+      <span>Drum</span>
+    </div>
+  </div>
 
-    <div>Blog</div>
 
-    <div>Galactic Community</div>
-  </header>
-</div> -->
+
+  <div class="links-container" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+    <p [routerLink]="['/home']">Mothership</p>
+    <p [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
+    <p [routerLink]="['/events']">Events</p>
+    <!-- <p>Connect</p>
+    <p>Blog</p> -->
+    <p [routerLink]="['/moondrum-community']">MoonDrum Community</p>
+    <!-- <p>The Moon Shop</p>
+    <p>Portfolio</p> -->
+  </div>
+
+</div>
