@@ -4,10 +4,10 @@ import { HomeComponent } from './navigation/pages/home/home.component';
 import { MoonDashboardComponent } from './navigation/pages/moon-dashboard/moon-dashboard.component';
 import { CosmoVisionComponent } from './navigation/pages/cosmo-vision/cosmo-vision.component';
 import { MoondrumCommunityComponent } from './navigation/pages/moondrum-community/moondrum-community.component';
-import { EventsComponent } from './navigation/pages/events/events.component';
+import { EventsComponent } from './modules/events/components/events/events.component';
 
 const routes: Routes = [
-    {
+	{
 		path: '',
 		redirectTo: '/home',
 		pathMatch: 'full'
@@ -29,19 +29,24 @@ const routes: Routes = [
 		component: MoondrumCommunityComponent,
 	},
 	{
-		path: 'events',
+		path: 'events/:artistId',
 		component: EventsComponent,
-	},
+		children: [
+			{ path: '', component: EventsComponent },
+			//   {path: 'home', component: EventsComponent},
+			//   {path: 'albums', component: ArtistAlbumListComponent},
+		]
+	}
 
-	
 
-	
+
+
 ];
 
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -29,6 +29,7 @@ import { CosmoVisionComponent } from './navigation/pages/cosmo-vision/cosmo-visi
 import { EventsComponent } from './navigation/pages/events/events.component';
 import { MoondrumCommunityComponent } from './navigation/pages/moondrum-community/moondrum-community.component';
 import { ImageSliderComponent } from './generic/image-slider/image-slider.component';
+import { EventsModule } from './modules/events/events.module';
 
 
 @NgModule({
@@ -48,9 +49,10 @@ import { ImageSliderComponent } from './generic/image-slider/image-slider.compon
     PhotoGalleryComponent,
     TestComponent,
     CosmoVisionComponent,
-    EventsComponent,
+    // EventsComponent,
     MoondrumCommunityComponent,
     ImageSliderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,9 @@ import { ImageSliderComponent } from './generic/image-slider/image-slider.compon
     MatCardModule,
     MatMenuModule,
     MatButtonModule, 
-    AppRoutingModule
+    AppRoutingModule,   
+    // Events
+    EventsModule
 
   ],
   providers: [],
