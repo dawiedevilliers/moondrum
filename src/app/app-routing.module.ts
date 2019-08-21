@@ -28,15 +28,7 @@ const routes: Routes = [
 		path: 'moondrum-community',
 		component: MoondrumCommunityComponent,
 	},
-	{
-		path: 'events/:artistId',
-		component: EventsComponent,
-		children: [
-			{ path: '', component: EventsComponent },
-			//   {path: 'home', component: EventsComponent},
-			//   {path: 'albums', component: ArtistAlbumListComponent},
-		]
-	}
+
 
 
 

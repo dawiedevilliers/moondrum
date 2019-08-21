@@ -64,10 +64,11 @@ import { EventsModule } from './modules/events/events.module';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatButtonModule, 
-    AppRoutingModule,   
+    MatButtonModule,
     // Events
-    EventsModule
+    EventsModule,
+    AppRoutingModule,
+
 
   ],
   providers: [],
