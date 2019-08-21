@@ -1,27 +1,7 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-around center">
 
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
+  <div *ngFor="let event of events;">
+    <app-events-item [event]="event"></app-events-item>
+  </div>
   
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-  <app-events-item></app-events-item>
-
-
-
 </div>
