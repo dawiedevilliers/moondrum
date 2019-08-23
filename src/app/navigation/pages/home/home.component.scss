@@ -9,86 +9,203 @@
 //     position: relative;
 // }
 
-#main-scene {
-    background-size: 2000px;
-    width: 100%; // height: 100%;
-    position: relative;
-    // background-color: #001c2b;
-    height: 100vh;
-    min-height: 900px;
-    position: relative;
+.circle {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  //   background-color: brown;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  left: -340px !important;
+  top: 30px !important;
+
+  img {
+    width: 80px;
+    height: 80px;
   }
 
-#flower {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;    
+  .top-bee {
+    top: -77px;
     right: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    width: 160px;
+    height: 160px;
+  }
 
-    img {
-        height: 100%;
+  .left-top-bee {
+    top: 50px;
+    left: -50px;
+    position: absolute;
+    margin: auto;
+    width: 160px;
+    height: 160px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .left-bottom-bee {
+    bottom: 50px;
+    left: -50px;
+    position: absolute;
+    margin: auto;
+    width: 160px;
+    height: 160px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleY(-1) scaleX(-1);
+  }
+
+  .center-bee {
+    top: 20px;
+    bottom: 0;
+    left: 28px;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 280px;
+    position: absolute;
+  }
+
+  .right-top-bee {
+    top: 50px;
+    right: -50px;
+    position: absolute;
+    margin: auto;
+    width: 160px;
+    height: 160px;
+  }
+
+  .right-bottom-bee {
+    bottom: 50px;
+    right: -50px;
+    position: absolute;
+    margin: auto;
+    width: 160px;
+    height: 160px;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+
+  .bottom-bee {
+    bottom: -77px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    // -webkit-transform: rotate(180deg);
+    // transform: rotate(180deg);
+    width: 160px;
+    height: 160px;
+  }
+
+}
+
+.lunar-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 800px !important;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  text-align: center;
+
+  .header {
+    font-size: 32px;
+  }
+
+  .lunar-utopia {
+    h1 {
+      font-size: 140px;
+      font-family: 'Ultra-condensed';
     }
+  }
+
+}
+
+#main-scene {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: relative;
+  // background-size: 2000px;
+  // position: relative;
+  // min-height: 900px;
+  // position: relative;
+}
+
+#flower {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  img {
+    height: 100%;
+  }
 }
 
 #eclipse {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0; 
-    
-    img {
-        height: 100%;
-    }
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  img {
+    height: 100%;
+  }
 }
 
-#center-bee {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    img {
-        height: 100%;
-        
-    }
-}
+// #center-bee {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//     img {
+//         display: block;
+//         height: 60px;
+
+//     }
+// }
 
 
 .center-text {
-    h1 {
-        color: white;
-        font-size: 70px;
-        font-family: 'SansPoster';
-        font-family: 'Gracetians';
-    }
+  h1 {
+    color: white;
+    font-size: 70px;
+    font-family: 'SansPoster';
+    font-family: 'Gracetians';
+  }
 }
 
 .bannerHome {
-    // min-height: 950px;
-    // height: 100vh;
-    // background-position: 50% 10%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: absolute; // background-color: #001c2b;
-    -webkit-animation: banner-animation normal 2s, fade-in normal 2s;
-    animation: banner-animation normal 2s, fade-in normal 2s; // background-image: none;
+  // min-height: 950px;
+  // height: 100vh;
+  // background-position: 50% 10%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute; // background-color: #001c2b;
 
-  }
+}
 
-  .animated-background {
-    background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
-    background-size: cover;
-    // background-size: 2000px;
-    // background-position: 50% 10%;
-    transition: height 0.4s ease-in;
-    background-repeat: no-repeat;
-    // background-color: #091e35;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    // animation: banner-animation normal 2s, fade-in normal 2s;
-    // transform: scale(1.1);
-  }
+.animated-background {
+  background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
+  // background-image: url(lunar_background.png);
+  background-size: cover;
+  background-position: center;
+  background-position-y: -100px;
+  transition: height 0.4s ease-in;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
