@@ -10,6 +10,17 @@
 
   @font-face {
     font-family: 'Ultra-condensed';
-    // src: url('../fonts/lunar/UltraCondensedSansSerif.ttf')  format('truetype'), /* Safari, Android, iOS */
+    src: url('assets/fonts/lunar/UltraCondensedSansSerif.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
 
+  
+  @font-face {
+    font-family: 'Chrobot';
+    src: url('assets/fonts/lunar/Chrobot.otf')  format('opentype'), /* Safari, Android, iOS */
+  }
+
+  
+  @font-face {
+    font-family: 'Volstead';
+    src: url('assets/fonts/lunar/Volstead.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
