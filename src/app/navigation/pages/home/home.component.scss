@@ -26,7 +26,7 @@
   }
 
   .top-bee {
-    top: -77px;
+    top: -140px;
     right: 0;
     left: 0;
     position: absolute;
@@ -39,7 +39,7 @@
 
   .left-top-bee {
     top: 50px;
-    left: -50px;
+    left: -100px;
     position: absolute;
     margin: auto;
     width: 160px;
@@ -50,7 +50,7 @@
 
   .left-bottom-bee {
     bottom: 50px;
-    left: -50px;
+    left: -100px;
     position: absolute;
     margin: auto;
     width: 160px;
@@ -72,7 +72,7 @@
 
   .right-top-bee {
     top: 50px;
-    right: -50px;
+    right: -100px;
     position: absolute;
     margin: auto;
     width: 160px;
@@ -81,7 +81,7 @@
 
   .right-bottom-bee {
     bottom: 50px;
-    right: -50px;
+    right: -100px;
     position: absolute;
     margin: auto;
     width: 160px;
@@ -91,49 +91,70 @@
   }
 
   .bottom-bee {
-    bottom: -77px;
+    bottom: -140px;
     right: 0;
     left: 0;
     position: absolute;
     margin: auto;
-    // -webkit-transform: rotate(180deg);
-    // transform: rotate(180deg);
     width: 160px;
     height: 160px;
   }
 
 }
 
-.lunar-text {
-  position: absolute;
+.parent {
+  display: flex !important;
+  position: absolute !important;
   right: 0;
-  bottom: 0;
-  left: 800px !important;
   margin: auto;
-  width: 400px;
-  height: 500px;
-  text-align: center;
-
-  .header {
-    font-size: 32px;
-  }
-
-  .lunar-utopia {
-    h1 {
-      font-size: 140px;
-      font-family: 'Ultra-condensed';
+  left: 5px !important;
+  top: 143px !important;
+  height: 600px;
+  .lunar-text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 800px !important;
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+  
+    .header {
+      font-size: 40px;
+      font-family: 'Roboto-condensed';
+      text-align: center;
     }
-  }
+  
+    .lunar-utopia {
+      h1 {
+        font-size: 140px;
+        font-family: 'Ultra-condensed';
+      }
+  
 
-  .footer {
-    h3 {
-      font-family: 'Volstead';
-      font-size: 90px;
-      font-weight: 100;
     }
+  
+    .footer {
+      h3 {
+        font-family: 'Volstead';
+        font-size: 90px;
+        font-weight: 100;
+      }
+  
+      h4 {
+        font-family: 'Roboto-condensed';
+      }
+    }
+  
   }
-
 }
+
+.lunar-image {
+  width: 300px;
+}
+
+
 
 #main-scene {
   width: 100%;
@@ -167,6 +188,20 @@
 
   img {
     height: 100%;
+  }
+}
+.footer {
+  h3 {
+    font-family: 'Volstead';
+    font-size: 80px;
+    color: #4e2508;
+    font-weight: 100;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
   }
 }
 
