@@ -9,6 +9,14 @@
 //     position: relative;
 // }
 
+
+@mixin spin($duration: 2s ) {
+  animation: spin  $duration;
+}
+
+////////////////////////////////////////////Mixins///////////////////////////////////@if 
+ 
+
 .circle {
   width: 600px;
   height: 600px;
@@ -110,6 +118,8 @@
   left: 5px !important;
   top: 143px !important;
   height: 600px;
+  z-index: 1;
+
   .lunar-text {
     position: absolute;
     right: 0;
@@ -119,34 +129,34 @@
     width: 400px;
     height: 500px;
     text-align: center;
-  
+
     .header {
       font-size: 40px;
       font-family: 'Roboto-condensed';
       text-align: center;
     }
-  
+
     .lunar-utopia {
       h1 {
         font-size: 140px;
         font-family: 'Ultra-condensed';
       }
-  
+
 
     }
-  
+
     .footer {
       h3 {
         font-family: 'Volstead';
         font-size: 90px;
         font-weight: 100;
       }
-  
+
       h4 {
         font-family: 'Roboto-condensed';
       }
     }
-  
+
   }
 }
 
@@ -190,6 +200,7 @@
     height: 100%;
   }
 }
+
 .footer {
   h3 {
     font-family: 'Volstead';
@@ -205,19 +216,19 @@
   }
 }
 
-// #center-bee {
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     margin: auto;
-//     img {
-//         display: block;
-//         height: 60px;
+.fractal1 {
+  width: 300px;
+  height: 300px;
+  bottom: 23px;
+  top: 435px !important;
+  left: 645px !important;
 
-//     }
-// }
+
+
+  img {
+    width: 100%;
+  }
+}
 
 
 .center-text {
@@ -252,4 +263,136 @@
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+
+$veryslow: 1000s;
+
+@media screen and (max-height: 800px) {
+  .animated-background {
+    background-size: 1300px;
+
+  }
+
+
+  .circle {
+    width: 450px;
+    height: 451px;
+    border-radius: 100%;
+    position: absolute;
+    /* background-color: azure; */
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    left: -410px !important;
+    top: -124px !important;
+  }
+
+  .parent {
+    display: flex !important;
+    position: absolute !important;
+    right: 0;
+    margin: auto;
+    left: 120px !important;
+    top: 40px !important;
+    height: 600px;
+
+    .lunar-text {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: -60px;
+      left: 640px !important;
+      margin: auto;
+      width: 400px;
+      height: 500px;
+      text-align: center;
+    }
+
+  }
+
+  .fractal1 {
+    width: 300px;
+    height: 300px;
+    bottom: 23px;
+    top: 435px !important;
+    left: 645px !important;
+
+
+    img {
+      width: 100%;
+      // animation: spin 60s infinite ease-in
+
+    }
+  }
+
+  .fractal5 {
+    width: 300px;
+    height: 300px;
+    bottom: 23px;
+    top: 452px !important;
+    left: 818px !important;
+    z-index: 0;
+    animation: grow 60s infinite;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .fractal3 {
+    width: 300px;
+    height: 300px;
+    bottom: 23px;
+    top: 360px !important;
+    left: 1006px !important;
+    z-index: 0;
+    @include  spin(300s);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .fractal2 {
+    width: 260px;
+    height: 300px;
+    bottom: 23px;
+    top: 225px !important;
+    left: 1200px !important;
+    z-index: 0;
+    @include spin($veryslow);
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+}
+
+
+
+
+/////////////////////////Animations///////////////////////////
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: rotate(1.3);
+  }
 }
