@@ -138,6 +138,7 @@ $veryslow: 1000s;
   top: 143px !important;
   height: 600px;
   z-index: 1;
+  pointer-events: all;
 
   .lunar-text {
     position: absolute;
@@ -249,8 +250,8 @@ $veryslow: 1000s;
   right: 0;
   margin: auto;
   width: 350px;
-  top: 711px !important;
-  left: 77px !important;
+  top: 730px !important;
+  left: 85px !important;
   pointer-events: all;
 
 
@@ -460,35 +461,26 @@ $veryslow: 1000s;
     position: absolute !important;
     right: 0;
     margin: auto;
-    left: 120px !important;
-    top: 40px !important;
-    height: 600px;
+    left: 50px !important;
+    top: 445px !important;
+    width: 260px;
+    /* height: 600px; */
     pointer-events: all;
 
-
-    img {
-      width: 500px;
-      /* height: 600px; */
-      border-radius: 100%;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      left: 72px !important;
-      top: 820px !important;
-
-    }
   }
 
   
 
   .fractal2 {
-    width: 260px;
-    height: 300px;
-    bottom: 23px;
-    top: 225px !important;
-    left: 1200px !important;
-    z-index: 0;
+    display: flex !important;
+    position: absolute !important;
+    right: 0;
+    margin: auto;
+    left: 1065px !important;
+    top: 235px !important;
+    width: 200px;
+    /* height: 600px; */
+    pointer-events: all;
     @include spin($veryslow);
 
     img {
@@ -498,13 +490,16 @@ $veryslow: 1000s;
 
 
   .fractal3 {
-    width: 300px;
-    height: 300px;
-    bottom: 23px;
-    top: 360px !important;
-    left: 1006px !important;
-    z-index: 0;
-    @include  spin(300s);
+    display: flex !important;
+    position: absolute !important;
+    right: 0;
+    margin: auto;
+    left: 780px !important;
+    top: 400px !important;
+    width: 200px;
+    /* height: 600px; */
+    pointer-events: all;
+    animation: grow 60s infinite;
 
     img {
       width: 100%;
@@ -512,12 +507,15 @@ $veryslow: 1000s;
   }
 
   .fractal5 {
-    width: 300px;
-    height: 300px;
-    bottom: 23px;
-    top: 452px !important;
-    left: 818px !important;
-    z-index: 0;
+    display: flex !important;
+    position: absolute !important;
+    right: 0;
+    margin: auto;
+    left: 400px !important;
+    top: 470px !important;
+    width: 260px;
+    /* height: 600px; */
+    pointer-events: all;
     animation: grow 60s infinite;
 
     img {

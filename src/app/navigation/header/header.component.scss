@@ -8,8 +8,14 @@
     p {
       cursor: pointer;
       color: white;
-      font-size: 22px;
+      font-size: 28px;
       margin: 0 10px;
+      font-family: 'Roboto-condensed';
+      transition: color 1s ease-in-out;
+    }
+
+    p:hover {
+      color: gold;
     }
 
   }
@@ -18,7 +24,17 @@
     span {
       margin: 10px 0;
       color: white;
-      font-size: 30px;
+      font-size: 34px;
+      font-family: 'Roboto-condensed';
+      transition: color 1s ease-in-out;
+    }
+
+  }
+
+  .title-container:hover {
+ 
+    span {
+      color: gold;
     }
   }
 }
