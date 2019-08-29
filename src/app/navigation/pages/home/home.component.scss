@@ -8,7 +8,7 @@
 //     background-color: black;
 //     position: relative;
 // }
-$veryslow: 1000s;
+$veryslow: 100s;
 
 @mixin spin($duration: 2s) {
   animation: spin $duration;
@@ -20,6 +20,35 @@ $veryslow: 1000s;
 
 
 }
+
+@mixin danceAnimation($duration) {
+
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0)  ;
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0)  ;
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0)  ;
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0)  ;
+    }
+  }
+
+  animation: shake $duration infinite;
+
+
+}
+
+
+
 
 ////////////////////////////////////////////Mixins///////////////////////////////////@if 
 
@@ -154,19 +183,19 @@ $veryslow: 1000s;
 
 
   .center-bee-container:hover {
-    // transform: scale(1.3) rotate(180deg);
-    transform: rotate(180deg);
+    transform: scale(1.3) ;
+    // transform: rotate(180deg);
     // left: -52px;
 
 
     .center-bee {
       opacity: 0;
-      left: 48px;
+      // left: 48px;
     }
 
     .center-bee-gold {
       opacity: 1;
-      left: 80px;
+      // left: 80px;
 
     }
 
@@ -204,6 +233,8 @@ $veryslow: 1000s;
 
 }
 
+$danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
+
 .circle:hover {
 
   .top-bee {
@@ -212,10 +243,12 @@ $veryslow: 1000s;
 
   .left-top-bee {
     transform: scaleX(-1) scale(1.1);
+
   }
 
   .right-top-bee {
     transform: scale(1.1);
+
   }
 
   .left-bottom-bee {
@@ -224,16 +257,19 @@ $veryslow: 1000s;
 
   .right-bottom-bee {
     transform: scaleY(-1) scale(1.1);
+
   }
 
   .bottom-bee {
     transform: scale(1.1);
+
   }
 
 
-  // .bee {
-  //   transform: scale(1.1);
-  // }
+  .bee-container {
+    // @include danceAnimation($danceDuration);
+
+  }
 
 }
 
@@ -259,7 +295,7 @@ $veryslow: 1000s;
     text-align: center;
 
     .header {
-      font-size: 40px;
+      font-size: 33.5px;
       font-family: 'Roboto-condensed';
       text-align: center;
     }
@@ -379,7 +415,7 @@ $veryslow: 1000s;
   top: 755px !important;
   left: 100px !important;
   pointer-events: all;
-
+  @include spin(50s);
 
   img {
     width: 100%;
@@ -551,19 +587,19 @@ $veryslow: 1000s;
     }
 
     .center-bee-container:hover {
-      // transform: scale(1.3) rotate(180deg);
-      transform: rotate(180deg);
+      transform: scale(1.3) ;
+      // transform: rotate(180deg);
       // left: -52px;
   
   
       .center-bee {
         opacity: 0;
-        left: 48px;
+        left: 0px;
       }
   
       .center-bee-gold {
         // width: 380px;
-        left: 32px;
+        left: 11px;
         top: 63px;
         
     
@@ -711,3 +747,5 @@ $veryslow: 1000s;
     transform: rotate(1.3);
   }
 }
+
+
