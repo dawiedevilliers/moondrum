@@ -14,12 +14,16 @@
 
 
   <div class="links-container" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
-    <p [routerLink]="['/home']">Lunar Utopia</p>
-    <p [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
-    <p [routerLink]="['/moondrum-community']">MoonDrum Community</p>
-    <p class="facebook" (click)="openLink('https://www.facebook.com/OneHeartManyDrums/')">Facebook</p>
-    <p class="twitter" (click)="openLink('https://www.twitter.com/MoonDrumP')">Twitter</p>
-    <p class="instagram" (click)="openLink('https://www.instagram.com/moon_drum_productions/')">Instagram</p>
+    <p fxHide.lt-md [routerLink]="['/home']">Lunar Utopia</p>
+    <p fxHide.lt-md [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
+    <p fxHide.lt-md [routerLink]="['/moondrum-community']">MoonDrum Community</p>
+    <p fxHide.lt-md class="facebook" (click)="openLink('https://www.facebook.com/OneHeartManyDrums/')">Facebook</p>
+    <p fxHide.lt-md class="twitter" (click)="openLink('https://www.twitter.com/MoonDrumP')">Twitter</p>
+    <p fxHide.lt-md class="instagram" (click)="openLink('https://www.instagram.com/moon_drum_productions/')">Instagram</p>
+
+    <p fxHide.gt-sm class="facebook" (click)="openLink('https://www.facebook.com/OneHeartManyDrums/')">F</p>
+    <p fxHide.gt-sm class="twitter" (click)="openLink('https://www.twitter.com/MoonDrumP')">T</p>
+    <p fxHide.gt-sm class="instagram" (click)="openLink('https://www.instagram.com/moon_drum_productions/')">I</p>
 
 
     <!-- <p [routerLink]="['/events']">Events</p> -->
