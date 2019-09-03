@@ -10,12 +10,58 @@
 // }
 $veryslow: 1000s;
 
-@mixin spin($duration: 2s ) {
-  animation: spin  $duration;
+@mixin spin($duration: 2s) {
+  animation: spin $duration;
+}
+
+@mixin rotateTransform($degrees: 180deg) {
+  // animation: spin  $duration;
+  transform: rotate($degrees);
+
+
 }
 
 ////////////////////////////////////////////Mixins///////////////////////////////////@if 
- 
+
+
+.fractal1,
+.fractal2,
+.fractal3,
+.fractal5 {
+
+  img {
+    transition: transform 4s ease-in-out;
+
+  }
+}
+
+
+.circles-spin {
+  .fractal1 {
+    img {
+      @include rotateTransform(720deg);
+    }
+
+  }
+
+  .fractal5 {
+    img {
+      @include rotateTransform(680deg);
+    }
+  }
+
+  .fractal3 {
+    img {
+      @include rotateTransform(312deg);
+    }
+  }
+
+  .fractal2 {
+    img {
+      @include rotateTransform(177deg);
+    }
+  }
+}
 
 .circle {
   width: 600px;
@@ -28,101 +74,132 @@ $veryslow: 1000s;
   left: -430px !important;
   top: 30px !important;
 
- .bee {
-  transition: transform 3s ease-in-out;
- }
+  .bee {
+    transition: transform 3s ease-in-out;
+  }
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 220px;
+    height: 220px;
   }
 
   .top-bee {
-    top: -140px;
+    top: -185px;
     right: 0;
     left: 0;
     position: absolute;
     margin: auto;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    width: 160px;
-    height: 160px;
   }
 
   .left-top-bee {
-    top: 50px;
-    left: -100px;
+    top: 30px;
+    left: -180px;
     position: absolute;
     margin: auto;
-    width: 160px;
-    height: 160px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
 
   .left-bottom-bee {
-    bottom: 50px;
-    left: -100px;
+    bottom: 30px;
+    left: -180px;
     position: absolute;
     margin: auto;
-    width: 160px;
-    height: 160px;
     -webkit-transform: scaleX(-1);
     transform: scaleY(-1) scaleX(-1);
   }
 
-  .center-bee {
+  .center-bee-container {
+    position: absolute;
+    left: 40px;
     top: 20px;
     bottom: 0;
-    left: 28px;
     right: 0;
     margin: auto;
-    width: 400px;
-    height: 280px;
-    position: absolute;
-    transition: transform 4s ease-in-out, content 4s;
+    cursor: pointer;
+    transition: transform 2s ease-in-out, left 2s ease-in-out;
+
+    .center-bee {
+      left: 0px;
+      top: 0px;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 540px;
+      height: auto;
+      position: absolute;
+      opacity: 1;
+      cursor: pointer;
+      transition: opacity 4s ease-in-out, left 1s ease-in-out;
+    }
+
+    .center-bee-gold {
+      width: 430px;
+      height: auto;
+      position: absolute;
+      z-index: 3;
+      top: 85px;
+      left: 40px;
+      opacity: 0;
+      transition: opacity 4s ease-in-out, left 1s ease-in-out;
+    }
+
+
   }
 
-  
-  .center-bee:hover {
-  // transform: scale(1.3) rotate(180deg);
-  transform: rotate(180deg);
 
-  // content:url("/assets/Images/LunarUtopia/bee1_gold.png");
+  
+
+
+  .center-bee-container:hover {
+    // transform: scale(1.3) rotate(180deg);
+    transform: rotate(180deg);
+    // left: -52px;
+
+
+    .center-bee {
+      opacity: 0;
+      left: 48px;
+    }
+
+    .center-bee-gold {
+      opacity: 1;
+      left: 80px;
+
+    }
+
+    // content:url("/assets/Images/LunarUtopia/bee1_gold.png");
   }
 
   .right-top-bee {
-    top: 50px;
-    right: -100px;
+    top: 30px;
+    right: -180px;
     position: absolute;
     margin: auto;
-    width: 160px;
-    height: 160px;
   }
 
   .right-top-bee:hover {
-    content:url("/assets/Images/LunarUtopia/social-media/fb.png");
+    // content:url("/assets/Images/LunarUtopia/social-media/fb.png");
   }
 
   .right-bottom-bee {
-    bottom: 50px;
-    right: -100px;
+    bottom: 30px;
+    right: -180px;
     position: absolute;
     margin: auto;
-    width: 160px;
-    height: 160px;
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
   }
 
   .bottom-bee {
-    bottom: -140px;
+    bottom: -185px;
     right: 0;
     left: 0;
     position: absolute;
     margin: auto;
-    width: 160px;
-    height: 160px;
+
   }
 
 }
@@ -132,7 +209,7 @@ $veryslow: 1000s;
   .top-bee {
     transform: rotate(180deg) scale(1.1);
   }
-  
+
   .left-top-bee {
     transform: scaleX(-1) scale(1.1);
   }
@@ -197,11 +274,14 @@ $veryslow: 1000s;
     }
 
     .footer {
+
+      cursor: pointer;
+
       h3 {
         font-family: 'Volstead';
         font-size: 90px;
         font-weight: 100;
-       
+
       }
 
       h4 {
@@ -253,6 +333,21 @@ $veryslow: 1000s;
   }
 }
 
+.header {
+
+  transition: color 2s;
+
+
+
+}
+
+.header:hover {
+
+  color: gold;
+
+}
+
+
 .footer {
   h3 {
     font-family: 'Volstead';
@@ -280,9 +375,9 @@ $veryslow: 1000s;
   position: absolute !important;
   right: 0;
   margin: auto;
-  width: 350px;
-  top: 730px !important;
-  left: 85px !important;
+  width: 180px;
+  top: 755px !important;
+  left: 100px !important;
   pointer-events: all;
 
 
@@ -296,9 +391,8 @@ $veryslow: 1000s;
   position: absolute !important;
   right: 0;
   margin: auto;
-  width: 400px;
-  /* height: 400px; */
-  top: 365px !important;
+  width: 250px;
+  top: 440px !important;
   left: 1563px !important;
   @include spin($veryslow);
 
@@ -377,58 +471,13 @@ $veryslow: 1000s;
 
 
 
+@media screen and (max-height: 900px) {
 
 
 
-
-// .fractal2 {
-//   width: 260px;
-//   height: 300px;
-//   bottom: 23px;
-//   top: 225px !important;
-//   left: 1200px !important;
-//   z-index: 0;
-//   @include spin($veryslow);
-
-//   img {
-//     width: 100%;
-//   }
-// }
-
-
-// .fractal3 {
-//   width: 300px;
-//   height: 300px;
-//   bottom: 23px;
-//   top: 360px !important;
-//   left: 1006px !important;
-//   z-index: 0;
-//   @include  spin(300s);
-
-//   img {
-//     width: 100%;
-//   }
-// }
-
-// .fractal5 {
-//   width: 300px;
-//   height: 300px;
-//   bottom: 23px;
-//   top: 452px !important;
-//   left: 818px !important;
-//   z-index: 0;
-//   animation: grow 60s infinite;
-
-//   img {
-//     width: 100%;
-//   }
-// }
-
-
-
-@media screen and (max-height: 800px) {
   .animated-background {
     background-size: 1300px;
+    // background-position-y: -50px;
 
   }
 
@@ -444,6 +493,86 @@ $veryslow: 1000s;
     margin: auto;
     left: -410px !important;
     top: -124px !important;
+
+    .top-bee {
+      top: -74px;
+    }
+
+    .left-top-bee {
+      top: 58px;
+      left: -40px;
+    }
+
+    .right-top-bee {
+      top: 58px;
+      right: -40px;
+    }
+
+    .right-bottom-bee {
+      bottom: 60px;
+      right: -45px;
+    }
+
+    .left-bottom-bee {
+      bottom: 60px;
+      left: -45px;
+    }
+
+    .bottom-bee {
+      bottom: -70px;
+    }
+
+    $beeDimensions: 120px;
+
+    img {
+      width: $beeDimensions;
+      height: $beeDimensions;
+    }
+
+    .center-bee-container {
+      left: 40px;
+      top: 20px;
+      bottom: 0;
+      right: 0;
+  
+      .center-bee {
+        width: 380px;
+      }
+
+      .center-bee-gold {
+        width: 355px;
+        top: 53px;
+        left: 10px;
+      }
+  
+      
+  
+  
+    }
+
+    .center-bee-container:hover {
+      // transform: scale(1.3) rotate(180deg);
+      transform: rotate(180deg);
+      // left: -52px;
+  
+  
+      .center-bee {
+        opacity: 0;
+        left: 48px;
+      }
+  
+      .center-bee-gold {
+        // width: 380px;
+        left: 32px;
+        top: 63px;
+        
+    
+      }
+  
+      // content:url("/assets/Images/LunarUtopia/bee1_gold.png");
+    }
+  
+
   }
 
   .parent {
@@ -482,7 +611,7 @@ $veryslow: 1000s;
     //     top: 30px !important;
     //   }
 
-    
+
     // }
 
   }
@@ -496,10 +625,9 @@ $veryslow: 1000s;
     top: 480px !important;
     width: 140px;
     pointer-events: all;
-
   }
 
-  
+
 
   .fractal2 {
     display: flex !important;
@@ -553,7 +681,8 @@ $veryslow: 1000s;
     }
   }
 
- 
+
+
 
 }
 

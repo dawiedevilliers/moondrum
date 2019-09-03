@@ -2,7 +2,7 @@
 
 
   <div fxLayout="row" fxLayoutAlign="center center">
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button>
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <div class="title-container">
@@ -16,7 +16,12 @@
   <div class="links-container" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
     <p [routerLink]="['/home']">Mothership</p>
     <p [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
-    <p [routerLink]="['/events']">Events</p>
+    <p (click)="openLink('https://www.facebook.com/OneHeartManyDrums/')">Facebook</p>
+    <p (click)="openLink('https://www.twitter.com/MoonDrumP')">Twitter</p>
+    <p (click)="openLink('https://www.instagram.com/moon_drum_productions/')">Instagram</p>
+
+
+    <!-- <p [routerLink]="['/events']">Events</p> -->
     <!-- <p>Connect</p>
     <p>Blog</p> -->
     <p [routerLink]="['/moondrum-community']">MoonDrum Community</p>

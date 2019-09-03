@@ -9,8 +9,12 @@ import * as Parallax from 'parallax-js';
 export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainscene') parallaxScene: ElementRef;
+  spin = false;
+
 
   constructor() { }
+
+
 
   ngOnInit() {
   }
@@ -28,6 +32,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
         hoverOnly: true
       });
     }
+
+  }
+
+  goToTickets() {
+
+    let url = 'https://www.webtickets.co.za/v2/event.aspx?itemid=1493341778';
+
+    window.open(url, "_blank");
 
   }
 

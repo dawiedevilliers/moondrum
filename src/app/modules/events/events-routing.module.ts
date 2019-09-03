@@ -4,7 +4,7 @@ import { EventsComponent } from "./components/events/events.component";
 import { EventsSelectionComponent } from "./components/events-selection/events-selection.component";
 
 const landingRoutes: Routes = [
-	{ path: '', component: EventsComponent },
+	// { path: '', component: EventsComponent },
 	// { path: 'events', component: EventsComponent },
 	{
 		path: 'events',

@@ -1,4 +1,4 @@
-<div #mainscene id="main-scene" fxLayout="column" fxLayoutAlign="center center">
+<div [ngClass]="{'circles-spin': spin}" #mainscene id="main-scene" fxLayout="column" fxLayoutAlign="center center">
 
   <div data-depth="0.08" class="bannerHome">
     <div class="animated-background">
@@ -20,7 +20,11 @@
       <img class="left-top-bee bee" src="/assets/Images/LunarUtopia/bee3.png" alt="">
       <img class="right-top-bee bee" src="/assets/Images/LunarUtopia/bee3.png" alt="">
 
-      <img class="center-bee" src="/assets/Images/LunarUtopia/bee1.png" alt="">
+      <div class="center-bee-container" (click)="goToTickets()">
+        <img class="center-bee-gold" src="/assets/Images/LunarUtopia/bee1_gold.png" alt="">
+        <img class="center-bee" src="/assets/Images/LunarUtopia/bee1.png" alt="">
+      </div>
+
 
       <img class="left-bottom-bee bee" src="/assets/Images/LunarUtopia/bee3.png" alt="">
       <img class="right-bottom-bee bee" src="/assets/Images/LunarUtopia/bee3.png" alt="">
@@ -38,9 +42,10 @@
         <img class="lunar-image" src="/assets/Images/LunarUtopia/lunar_text.png" alt="">
       </div>
 
-      <div class="footer" >
+      <div class="footer" (mouseover)="this.spin = true" (mouseout)="this.spin = false" (click)="goToTickets()">
         <h3>Honey for life</h3>
         <h4>Gathering and Regeneration Retreat</h4>
+        <h4>8 - 10 November</h4>
       </div>
 
     </div>

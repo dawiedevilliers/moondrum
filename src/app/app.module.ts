@@ -26,7 +26,6 @@ import { BlogComponent } from './navigation/pages/blog/blog.component';
 import { GalacticCommunityComponent } from './navigation/pages/galactic-community/galactic-community.component';
 import { MoonDashboardComponent } from './navigation/pages/moon-dashboard/moon-dashboard.component';
 import { CosmoVisionComponent } from './navigation/pages/cosmo-vision/cosmo-vision.component';
-import { EventsComponent } from './navigation/pages/events/events.component';
 import { MoondrumCommunityComponent } from './navigation/pages/moondrum-community/moondrum-community.component';
 import { ImageSliderComponent } from './generic/image-slider/image-slider.component';
 import { EventsModule } from './modules/events/events.module';
@@ -49,7 +48,6 @@ import { EventsModule } from './modules/events/events.module';
     PhotoGalleryComponent,
     TestComponent,
     CosmoVisionComponent,
-    // EventsComponent,
     MoondrumCommunityComponent,
     ImageSliderComponent,
 
