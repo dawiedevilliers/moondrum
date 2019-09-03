@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+
+  <div (click)="prev()" class="prev-arrow"></div>
+
+  <div class="image-container">
+    <img [src]="images[counter].url" class="coverflow__image" />
+  </div>
+
+  <div (click)="next()" class="next-arrow"></div>
+
+</div>

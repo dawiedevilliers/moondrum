@@ -1,0 +1,33 @@
+<div id="header-container" fxLayout="row" fxLayoutAlign="center center">
+
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button>
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <div class="title-container">
+      <span>Moon</span>
+      <span>Drum</span>
+    </div>
+  </div>
+
+
+
+  <div class="links-container" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+    <p [routerLink]="['/home']">Lunar Utopia</p>
+    <p [routerLink]="['/cosmo-vision']">Cosmo-vision</p>
+    <p [routerLink]="['/moondrum-community']">MoonDrum Community</p>
+    <p class="facebook" (click)="openLink('https://www.facebook.com/OneHeartManyDrums/')">Facebook</p>
+    <p class="twitter" (click)="openLink('https://www.twitter.com/MoonDrumP')">Twitter</p>
+    <p class="instagram" (click)="openLink('https://www.instagram.com/moon_drum_productions/')">Instagram</p>
+
+
+    <!-- <p [routerLink]="['/events']">Events</p> -->
+    <!-- <p>Connect</p>
+    <p>Blog</p> -->
+   
+    <!-- <p>The Moon Shop</p>
+    <p>Portfolio</p> -->
+  </div>
+
+</div>

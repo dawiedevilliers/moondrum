@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./custom-theme";
+@import "./assets/fonts/fonts.scss";
+
+html, body, app-root{
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    
+
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+md-icon{
+    font-family: 'Material Icons' !important;
+  }
+
+  .mat-icon{
+    font-family: 'Material Icons' !important;
+  }
+
+  .mat-toolbar.mat-primary {
+    background: black;
+    color: white;
+}

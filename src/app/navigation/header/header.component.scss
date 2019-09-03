@@ -1,0 +1,53 @@
+#header-container {
+
+  background-color: black;
+
+  .links-container {
+    width: 100%;
+
+    p {
+      cursor: pointer;
+      color: white;
+      font-size: 28px;
+      margin: 0 10px;
+      font-family: 'Roboto-condensed';
+      transition: color 1s ease-in-out;
+    }
+
+    p:hover {
+      color: gold;
+    }
+
+    .facebook {
+      color: #4267b2;
+    }
+
+    .twitter {
+      color: #1c94e0;
+    }
+
+    .instagram {
+      color: #cd486b;
+
+    }
+
+  }
+
+  .title-container {
+    span {
+      margin: 10px 0;
+      color: white;
+      font-size: 34px;
+      font-family: 'Roboto-condensed';
+      transition: color 1s ease-in-out;
+    }
+
+  }
+
+  .title-container:hover {
+
+    span {
+      color: gold;
+    }
+  }
+}
