@@ -1,20 +1,12 @@
-<div [ngClass]="{'circles-spin': spin}" #mainscene id="main-scene" fxLayout="column" fxLayoutAlign="center center">
+<div [ngClass]="{'circles-spin': spin}" fxHide.lt-lg #mainscene id="main-scene" fxLayout="column" fxLayoutAlign="center center">
 
   <div data-depth="0.08" class="bannerHome">
     <div class="animated-background">
     </div>
   </div>
 
-
-  <!-- <div data-depth="0.12" id="eclipse">
-    <img src="/assets/Images/LunarUtopia/eclipse.png" alt="">
-  </div> -->
-
-
-
-
-  <div data-depth="0.18" class="parent" fxLayout="row">
-    <div class="circle">
+  <div data-depth="0.18" class="parent" fxLayout="row" fxLayoutAlign.lt-md="center center">
+    <div class="circle" fxHide.lt-md >
 
       <div class="bee-container"><img class="top-bee bee" src="/assets/Images/LunarUtopia/bee2.png" alt=""></div>
       <div class="bee-container"><img class="left-top-bee bee" src="/assets/Images/LunarUtopia/bee3.png" alt=""></div>
@@ -55,21 +47,37 @@
     <img src="/assets/Images/LunarUtopia/fractal1.png" alt="">
   </div>
 
-
-
   <div data-depth="0.09" class="fractal5">
     <img src="/assets/Images/LunarUtopia/fractal5.png" alt="">
   </div>
 
-
   <div data-depth="0.18" class="fractal3">
     <img src="/assets/Images/LunarUtopia/fractal3.png" alt="">
   </div>
-
 
   <div data-depth="0.2" class="fractal2">
     <img src="/assets/Images/LunarUtopia/fractal2.png" alt="">
   </div>
 
 
+</div>
+
+<div fxLayout="column" fxLayoutAlign="center center" class="tablet" fxHide.gt-md>
+  <div class="lunar-text">
+
+    <div class="header">
+      MoonDrum Presents
+    </div>
+
+    <div class="luna-utopia">
+      <img class="lunar-image" src="/assets/Images/LunarUtopia/lunar_text.png" alt="">
+    </div>
+
+    <div class="footer" (mouseover)="this.spin = true" (mouseout)="this.spin = false" (click)="goToTickets()">
+      <h3>Honey for life</h3>
+      <h4>Gathering and Regeneration Retreat</h4>
+      <h4>8 - 10 November</h4>
+    </div>
+
+  </div>
 </div>
