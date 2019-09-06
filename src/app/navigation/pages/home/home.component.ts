@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   goToTickets() {
 
-    let url = 'https://www.webtickets.co.za/v2/event.aspx?itemid=1493341778';
+    const url = 'http://eventbytz.com/event/detail/5d710e7362e0c00619f3b38c/lunar-utopia/?fbclid=IwAR1QXVkRpIAnk_rRt0Gw9CX5UCjY6Ptxd0-u-srOS_vc6lAxiCnZmVCp6cc';
 
     window.open(url, "_blank");
 
