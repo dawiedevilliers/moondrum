@@ -2,3 +2,9 @@
     height: 100%;
     overflow: hidden;
 }
+
+@media screen and (max-width: 1278px) {
+    #main-container {
+        overflow: scroll;
+    }
+}
