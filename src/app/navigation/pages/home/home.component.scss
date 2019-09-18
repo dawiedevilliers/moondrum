@@ -8,6 +8,42 @@
 //     background-color: black;
 //     position: relative;
 // }
+$cirlce1: 1400px;
+$cirlce2: 1410px;
+
+.circle-container {
+
+  position: absolute;
+  z-index: 10;
+  /* width: 500px; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .circle {
+    border-radius: 100%;
+  }
+
+  .circle1 {
+    width: $cirlce1;
+    height: $cirlce1;
+    /* border-color: gold; */
+    border: 10px solid gold;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .circle2 {
+    width: $cirlce2;
+    height: $cirlce2;
+    border-color: green;
+    border: 10px solid green;
+    position: absolute;
+  }
+
+}
+
 $veryslow: 100s;
 
 @mixin spin($duration: 2s) {
@@ -25,20 +61,26 @@ $veryslow: 100s;
 
 
   @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0)  ;
+
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
     }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0)  ;
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
     }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0)  ;
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
     }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0)  ;
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
     }
   }
 
@@ -181,11 +223,11 @@ $veryslow: 100s;
   }
 
 
-  
+
 
 
   .center-bee-container:hover {
-    transform: scale(1.3) ;
+    transform: scale(1.3);
     // transform: rotate(180deg);
     // left: -52px;
 
@@ -235,7 +277,7 @@ $veryslow: 100s;
 
 }
 
-$danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
+$danceDuration: 0.82s cubic-bezier(.36, .07, .19, .97);
 
 .circle:hover {
 
@@ -342,10 +384,28 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
   min-height: 900px;
   background-color: black;
   position: relative;
-  // background-size: 2000px;
-  // position: relative;
-  // min-height: 900px;
-  // position: relative;
+  background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
+  background-size: 9000px;
+  background-position: center;
+  background-position-y: -800px;
+  background-position-x: -2261px;
+  transition: height 0.4s ease-in;
+  background-repeat: no-repeat;
+
+  
+}
+
+#main-scene::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  z-index: -1;
+  background: rgb(106,57,44);
+background: linear-gradient(90deg, rgba(106,57,44,1) 34%, rgba(240,226,141,1) 71%);
 }
 
 #flower {
@@ -372,19 +432,12 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
 .header {
-
   transition: color 2s;
-
-
-
 }
 
 .header:hover {
-
   color: gold;
-
 }
-
 
 .footer {
   h3 {
@@ -493,12 +546,12 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
 .animated-background {
-  background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
+  // background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
   // background-image: url(lunar_background.png);
   // background-size: cover;
-  background-size: 1920px;
-  background-position: center;
-  background-position-y: -100px;
+  // background-size: 1920px;
+  // background-position: center;
+  // background-position-y: -100px;
   transition: height 0.4s ease-in;
   background-repeat: no-repeat;
   width: 100%;
@@ -506,19 +559,34 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
   position: absolute;
 }
 
+.animated-background::after {
+  content: "";
+  background-image: url('../../../../assets/Images/LunarUtopia/lunar_background.png');
+  background-size: 1920px;
+  background-position: center;
+  background-position-y: -100px;
+  transition: height 0.4s ease-in;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+
+
 
 
 
 @media screen and (max-height: 900px) {
 
 
-
-  .animated-background {
+  .animated-background::after {
     background-size: 1300px;
-    // background-position-y: -50px;
-
   }
-
 
   .circle {
     width: 450px;
@@ -572,7 +640,7 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
       top: 0px;
       bottom: 0;
       right: 0;
-  
+
       .center-bee {
         width: 380px;
       }
@@ -581,33 +649,33 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
         width: 355px;
         left: 10px;
       }
-  
-      
-  
-  
+
+
+
+
     }
 
     .center-bee-container:hover {
-      transform: scale(1.3) ;
+      transform: scale(1.3);
       // transform: rotate(180deg);
       // left: -52px;
-  
-  
+
+
       .center-bee {
         opacity: 0;
         left: 0px;
       }
-  
+
       .center-bee-gold {
         // width: 380px;
         left: 11px;
-        
-    
+
+
       }
-  
+
       // content:url("/assets/Images/LunarUtopia/bee1_gold.png");
     }
-  
+
 
   }
 
@@ -818,5 +886,3 @@ $danceDuration: 0.82s cubic-bezier(.36,.07,.19,.97);
     transform: rotate(1.3);
   }
 }
-
-
