@@ -47,7 +47,7 @@ $cirlce2: 1410px;
 $veryslow: 100s;
 
 @mixin spin($duration: 2s) {
-  animation: spin $duration;
+  animation: spin $duration infinite;
 }
 
 @mixin rotateTransform($degrees: 180deg) {
@@ -391,6 +391,7 @@ $danceDuration: 0.82s cubic-bezier(.36, .07, .19, .97);
   background-position-x: -2261px;
   transition: height 0.4s ease-in;
   background-repeat: no-repeat;
+  overflow: hidden;
 
   
 }

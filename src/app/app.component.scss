@@ -8,3 +8,27 @@
         overflow: scroll;
     }
 }
+
+#top, #bottom, #left, #right {
+	background: #CAAB5F;
+	position: fixed;
+	}
+	#left, #right {
+        top: 40px;
+        bottom: 0;
+        width: 40px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+        #bottom { bottom: 0; 
+        height: 40px;}
+        
+.router-container {
+	overflow: scroll;
+}

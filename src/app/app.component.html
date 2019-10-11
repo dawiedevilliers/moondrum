@@ -1,7 +1,7 @@
 <div fxLayout="column" id="main-container">
 
 
-  <app-header fxFlex="0 0 auto">
+  <app-header [url]="url" fxFlex="0 0 auto">
 
   </app-header>
 
@@ -11,6 +11,12 @@
     <router-outlet>
     </router-outlet>
   </div>
+
+
+
+<div [@left] *ngIf="(this.url === '/home' || this.url === '/')" id="left"></div>
+<div [@right] *ngIf="(this.url === '/home' || this.url === '/')" id="right"></div>
+<div [@bottom] *ngIf="(this.url === '/home' || this.url === '/')" id="bottom"></div>
 
 
 </div>

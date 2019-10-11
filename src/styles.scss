@@ -15,6 +15,13 @@ html, body, app-root{
 
 }
 
+body {
+  display: flex;
+  flex-direction: column; /* creates rows out of the elements main and footer */
+  height: 100vh; 
+  margin:0;
+}
+
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -24,9 +31,9 @@ html {
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
-}
+// ::-webkit-scrollbar-thumb {
+//   background: #FF0000;
+// }
 
 h1, h2, h3 {
   margin: 0;

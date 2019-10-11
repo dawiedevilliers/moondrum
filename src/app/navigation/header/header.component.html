@@ -1,5 +1,4 @@
-<div id="header-container" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between center">
-
+<div [ngStyle]="(this.url === '/home' || this.url === '/') &&  {'position':'fixed', 'background-color': '#CAAB5F'}" id="header-container" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between center">
 
   <div fxFlex="0 0 auto" fxLayout="row" fxLayoutAlign="center center">
     <button fxHide type="button" aria-label="Toggle sidenav" mat-icon-button>

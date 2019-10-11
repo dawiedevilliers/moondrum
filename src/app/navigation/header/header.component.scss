@@ -2,6 +2,9 @@
 
   background-color: black;
   width: 100%;
+  padding: 0 40px;
+  z-index: 10;
+  transition: background-color 2s ease-in-out;
 
   .links-container {
 
