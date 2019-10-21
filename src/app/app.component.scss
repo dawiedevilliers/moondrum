@@ -4,9 +4,9 @@
 }
 
 @media screen and (max-width: 1278px) {
-    #main-container {
-        overflow: scroll;
-    }
+    // #main-container {
+    //     overflow: scroll;
+    // }
 }
 
 #top, #bottom, #left, #right {
@@ -30,5 +30,13 @@
         height: 40px;}
         
 .router-container {
-	overflow: scroll;
+	// overflow: scroll;
 }
+
+// ::ng-deep {
+// 	.router-flex+* {
+// 	  display: flex;
+// 	  flex: 1 1 100%;
+// 	  flex-direction: column;
+// 	}
+//   }
