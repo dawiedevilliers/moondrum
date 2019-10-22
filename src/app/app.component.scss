@@ -1,37 +1,60 @@
 #main-container {
-    height: 100%;
-    // overflow: hidden;
+  height: 100%;
+  // overflow: hidden;
 }
 
 @media screen and (max-width: 1278px) {
-    // #main-container {
-    //     overflow: scroll;
-    // }
+  // #main-container {
+  //     overflow: scroll;
+  // }
+
+  .router-container {
+    overflow: hidden;
+  }
 }
 
-#top, #bottom, #left, #right {
-	background: #CAAB5F;
-	position: fixed;
-	}
-	#left, #right {
-        top: 40px;
-        bottom: 0;
-        width: 40px;
-		}
-		#left { left: 0; }
-		#right { right: 0; }
-		
-	#top, #bottom {
-		left: 0; right: 0;
-		height: 15px;
-		}
-		#top { top: 0; }
-        #bottom { bottom: 0; 
-        height: 40px;}
-        
-.router-container {
-	// overflow: scroll;
+#top,
+#bottom,
+#left,
+#right {
+  background: #CAAB5F;
+  position: fixed;
 }
+
+#left,
+#right {
+  top: 40px;
+  bottom: 0;
+  width: 40px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+  height: 40px;
+}
+
+// .router-container {
+// 	overflow: scroll;
+// }
 
 // ::ng-deep {
 // 	.router-flex+* {
