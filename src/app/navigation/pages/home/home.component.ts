@@ -13,13 +13,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   timer = '';
 
   constructor() {
-    this.setupTimer();
+  
    }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
+    this.setupTimer();
     this.setupParallax();
    
   }

@@ -887,3 +887,19 @@ background: linear-gradient(90deg, rgba(106,57,44,1) 34%, rgba(240,226,141,1) 71
     transform: rotate(1.3);
   }
 }
+
+
+.timer-grow {
+  // animation: growTickets 1s 1s infinite ;
+  font-size: 60px;
+}
+
+@keyframes growTickets {
+  from {
+    transform: scale(1.01);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
