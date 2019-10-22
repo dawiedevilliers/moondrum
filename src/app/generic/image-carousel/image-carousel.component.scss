@@ -1,0 +1,33 @@
+@import '~assets/stylesheets/scss/colors.scss';
+
+.description-container {
+  text-align: center;
+  margin-bottom: 15px;
+
+  h3 {
+    color: $white;
+    margin: 5px 0;
+  }
+
+  p {
+    color: $white;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+::ng-deep {
+    .radio-group {
+        .mat-radio-outer-circle {
+          border-color: $white;
+        }
+      }
+}
+
+.carousel-item {
+    min-height: 135px;
+    width: 135px;
+    margin-bottom: 5px;
+}
+
+

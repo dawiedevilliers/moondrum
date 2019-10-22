@@ -1,0 +1,35 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+
+  <div *ngFor="let item of carouselItems; index as i" class="content-area">
+
+      <div class="content" *ngIf="this.selectedIndex === item.index">
+  
+        <div fxLayout="column" [@content]>
+  
+          <div fxLayout="column" fxLayoutAlign="center center">
+              <img class="carousel-item" [src]="item.image" alt="">
+            </div>
+        
+            <!-- <div class="description-container">
+              <h3 [@heading]>{{item.heading}}</h3>
+              <p  [@description]>{{item.description}}</p>
+            </div> -->
+
+            <div class="description-container">
+                <h3>{{item.heading}}</h3>
+                <p >{{item.description}}</p>
+              </div>
+
+        </div>
+  
+      </div>
+    </div>
+
+  <div fxLayout="row" class="radio-group"> 
+    <mat-radio-group (change)="changeIndex()" [(ngModel)]="selectedItem">
+      <mat-radio-button [checked]="this.selectedIndex === item.index" *ngFor="let item of this.carouselItems ; let i = index" [value]="item"></mat-radio-button>
+    </mat-radio-group>
+
+  </div>
+
+</div>
