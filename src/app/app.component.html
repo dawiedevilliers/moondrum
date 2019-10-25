@@ -16,7 +16,9 @@
 
 <div fxHide.lt-sm [@left] *ngIf="(this.url === '/home' || this.url === '/')" id="left"></div>
 <div fxHide.lt-sm [@right] *ngIf="(this.url === '/home' || this.url === '/')" id="right"></div>
-<div [@bottom] *ngIf="(this.url === '/home' || this.url === '/')" id="bottom"></div>
+<div [@bottom] *ngIf="(this.url === '/home' || this.url === '/')" id="bottom">
+  <div class="scroll-down"></div>
+</div>
 
 
 </div>
