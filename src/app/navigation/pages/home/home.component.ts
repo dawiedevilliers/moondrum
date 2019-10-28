@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import * as Parallax from 'parallax-js';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import * as Parallax from 'parallax-js';
 export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainscene') parallaxScene: ElementRef;
+  @ViewChild('testSlider') testSlider: ElementRef;
   spin = false;
   timer = '';
 
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.setupTimer();
     this.setupParallax();
+    this.setupSwiper();
    
   }
 
@@ -81,6 +84,23 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }, 1000);
 
 
+  }
+
+  // Initialize Swiper 
+  setupSwiper() {
+    var swiper = new Swiper(this.testSlider.nativeElement, {
+      effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
   }
 
 }
