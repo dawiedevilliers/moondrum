@@ -95,31 +95,32 @@
 <div class="description-container">
 
 
-  <div  style="background-image:url('/assets/Images/Venue/5.jpg')"></div>
+  <div style="background-image:url('/assets/Images/Venue/5.jpg')"></div>
 
   <div class="event-description" fxLayout="row">
 
-    <div fxFlex="0 0 50" class="event-images">
-      <!-- <img src="'/assets/Images/Venue/5.jpg'" alt=""> -->
+    <div fxFlex="0 0 50" fxLayout="column" fxLayoutAlign="center center">
 
-      <!-- Swiper -->
-      <div #testSlider class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/1.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/2.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/3.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/4.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/5.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/6.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/7.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/8.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/9.jpg')"></div>
-          <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/10.jpg')"></div>
+
+      <div class="event-images">
+        <!-- Swiper -->
+        <div #testSlider class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/2.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/3.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/4.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/5.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/6.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/7.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/8.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/9.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('/assets/Images/Venue/10.jpg')"></div>
+          </div>
+          <!-- Add Pagination -->
+          <div #pagination class="swiper-pagination"></div>
         </div>
-        <!-- Add Pagination -->
-        <div #pagination class="swiper-pagination"></div>
       </div>
-
     </div>
 
     <div class="event-text" fxFlex="1 0 50">
@@ -146,61 +147,19 @@
   <div class="artists" fxLayout="row">
 
     <div class="event-text" fxFlex="1 0 50">
-      <h3>★ WHAT TO EXPECT ★</h3>
+      <h3>Artists</h3>
 
-      <p>
-        ~ Audio Shamans to take you on booty shaking & heart opening journey
-      </p>
-
-      <p>
-        ~ Sacred underground Sanctuary with water well for ceremonial healing and therapies
-      </p>
-
-      <p>
-        ~ Bonfires
-      </p>
-
-      <p>
-        ~ Drumming
-      </p>
-
-      <p>
-        ~ Live Music Collaborations
-      </p>
-
-      <p>
-        ~ Plenty of Yoga & Meditations of various profiles!
-      </p>
-
-      <p>
-        ~ Craft & Artisan Bar
-      </p>
-
-      <p>
-        ~ Interactive Art Hub & Outdoor Exhibition!
-      </p>
-
-      <p>
-        ~ Tribal Market Platform
-      </p>
-
-      <p>
-        ~ Keynote Speaker Platform
-      </p>
-
-      <p>
-        ~ Ecological Regeneration Workshops
-      </p>
-
-      <p>
-        ~ Dance & Wellness & Shamanic Healing!
-      </p>
-
+      <p *ngFor="let artist of Artists">{{artist.name}}</p><br>
 
     </div>
 
-    <div class="event-images" fxFlex="0 0 50">
-      <img src="/assets/Images/Artists/1.jpg" alt="">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="0 0 50">
+     
+     <div class="event-images">
+        <app-swiper [SwiperImages]="Artists"></app-swiper>
+     </div>
+
+      
     </div>
 
 

@@ -29,6 +29,7 @@ import { CosmoVisionComponent } from './navigation/pages/cosmo-vision/cosmo-visi
 import { MoondrumCommunityComponent } from './navigation/pages/moondrum-community/moondrum-community.component';
 import { ImageSliderComponent } from './generic/image-slider/image-slider.component';
 import { EventsModule } from './modules/events/events.module';
+import { SwiperComponent } from './generic/swiper/swiper.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { EventsModule } from './modules/events/events.module';
     CosmoVisionComponent,
     MoondrumCommunityComponent,
     ImageSliderComponent,
+    SwiperComponent,
 
   ],
   imports: [

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import * as Parallax from 'parallax-js';
 import Swiper from 'swiper';
+import { SwiperImage } from '../../../classes/swiper-image';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('mainscene') parallaxScene: ElementRef;
   @ViewChild('testSlider') testSlider: ElementRef;
   @ViewChild('pagination') pagination: ElementRef;
+
+  Artists: SwiperImage[] = new Array();
   spin = false;
   timer = '';
 
@@ -20,12 +23,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
    }
 
   ngOnInit() {
+    this.setupArtists();
   }
 
   ngAfterViewInit() {
     this.setupTimer();
     this.setupParallax();
     this.setupSwiper();
+    
    
   }
 
@@ -102,6 +107,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
         el: this.pagination.nativeElement,
       },
     });
+  }
+
+  setupArtists() {
+    this.Artists.push(new SwiperImage('OM', '/assets/Images/Artists/OM.jpg'));
+    this.Artists.push(new SwiperImage('Arthur Merlin', '/assets/Images/Artists/Arthur_Merlin.jpg'));
+    this.Artists.push(new SwiperImage('Meek', '/assets/Images/Artists/Meek.jpg'));
+    this.Artists.push(new SwiperImage('Un-defined', '/assets/Images/Artists/Un-defined.jpg'));
+    this.Artists.push(new SwiperImage('What we are', '/assets/Images/Artists/What-we-are.jpg'));
+    this.Artists.push(new SwiperImage('Rebel mind', '/assets/Images/Artists/Rebel-mind.jpg'));
+    this.Artists.push(new SwiperImage('Mitchell Cebbs', '/assets/Images/Artists/Mitchell-Cebbs.jpg'));
+    this.Artists.push(new SwiperImage('YELSEW', '/assets/Images/Artists/YELSEW.jpg'));
+    this.Artists.push(new SwiperImage('SPYC9T1', '/assets/Images/Artists/SPYC9T1.jpg'));
+    this.Artists.push(new SwiperImage('Eco-teric', '/assets/Images/Artists/Eco-teric.jpg'));
+    this.Artists.push(new SwiperImage('Shakti', '/assets/Images/Artists/Shakti.jpg'));
+    this.Artists.push(new SwiperImage('Alessandro', '/assets/Images/Artists/Alessandro.jpg'));
   }
 
 }
