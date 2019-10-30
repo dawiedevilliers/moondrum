@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainscene') parallaxScene: ElementRef;
   @ViewChild('testSlider') testSlider: ElementRef;
+  @ViewChild('pagination') pagination: ElementRef;
   spin = false;
   timer = '';
 
@@ -98,7 +99,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         shadowScale: 0.94,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: this.pagination.nativeElement,
       },
     });
   }
