@@ -910,16 +910,48 @@ $danceDuration: 0.82s cubic-bezier(.36, .07, .19, .97);
 
   h3 {
     text-align: center;
+    font-family: 'Volstead';
+    font-size: 80px;
+    font-weight: 500;
+
   }
 
 
   .event-description {
     border-radius: 70px;
     overflow: hidden;
+    position: relative;
+
+    .event-text {
+      font-size: 23px;
+    }
+
+    .bee-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
 
   }
 
   .artists {
+    .event-text {
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+
+  .collaborators {
+    .event-text {
+      // text-align: center;
+      font-size: 22px;
+    }
+  }
+
+  .activities {
     .event-text {
       text-align: center;
       font-size: 22px;
@@ -931,11 +963,7 @@ $danceDuration: 0.82s cubic-bezier(.36, .07, .19, .97);
     font-family: 'Roboto-condensed';
 
 
-    h3 {
-      font-family: 'Volstead';
-      font-size: 60px;
-      font-weight: 500;
-    }
+
 
   }
 

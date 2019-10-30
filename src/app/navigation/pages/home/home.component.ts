@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('pagination') pagination: ElementRef;
 
   Artists: SwiperImage[] = new Array();
+  Collaborators: SwiperImage[] = new Array();
+  EventPhotos: SwiperImage[] = new Array();
+  Activities: SwiperImage[] = new Array();
   spin = false;
   timer = '';
 
@@ -24,12 +27,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.setupArtists();
+    this.setupColaborators();
+    this.setupEventPhotos();
+    this.setupActivities();
+
   }
 
   ngAfterViewInit() {
     this.setupTimer();
     this.setupParallax();
-    this.setupSwiper();
     
    
   }
@@ -122,6 +128,54 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.Artists.push(new SwiperImage('Eco-teric', '/assets/Images/Artists/Eco-teric.jpg'));
     this.Artists.push(new SwiperImage('Shakti', '/assets/Images/Artists/Shakti.jpg'));
     this.Artists.push(new SwiperImage('Alessandro', '/assets/Images/Artists/Alessandro.jpg'));
+    this.Artists.push(new SwiperImage('Phil Keye', '/assets/Images/Artists/Phil_Keye.jpg'));
+  }
+
+  setupColaborators() {
+    this.Collaborators.push(new SwiperImage('Piet aarde', '/assets/Images/Collaborators/Piet_aarde.jpg', 'Drumming, Didgeridoo master, Sweat-lodge facilitator, Shaman'));
+    this.Collaborators.push(new SwiperImage('Charlie & Kat', '/assets/Images/Collaborators/Charlie_Kat.jpg', 'Fire dancers, Vegan smoothie wizards'));
+    this.Collaborators.push(new SwiperImage('Seka Lantern Maleka', '/assets/Images/Collaborators/Seka_Maleka.jpg', 'Drumming leader, Ethereal Chanter, Shaman'));
+    this.Collaborators.push(new SwiperImage('Ferdinand Lourens', '/assets/Images/Collaborators/Ferdinand.jpg', 'Mindfulness teacher, Laughing Yoga Instructor'));
+    this.Collaborators.push(new SwiperImage('Cristina Torralbas Burchell', '/assets/Images/Collaborators/Cristina.jpg', 'Dancer, entertainer, Dancing instructor'));
+    this.Collaborators.push(new SwiperImage('Melian - Lion Yoga', '/assets/Images/Collaborators/Melian.jpg', 'Vinyasa Teacher and Yogi'));
+    this.Collaborators.push(new SwiperImage('Jean Francois Sobiecki', '/assets/Images/Collaborators/Jean.jpg', 'Plant medicine and holistic healer'));
+
+
+
+  }
+
+  setupEventPhotos() {
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/1.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/2.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/3.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/4.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/5.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/6.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/7.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/8.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/9.jpg'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/17.JPG'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/59.JPG'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/39.JPG'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/40.JPG'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/98.JPG'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/102.JPG'));
+    this.EventPhotos.push(new SwiperImage('', '/assets/Images/Venue/101.JPG'));
+
+  }
+
+  setupActivities() {
+
+    this.Activities.push(new SwiperImage('Bush Pub Wizardry', '/assets/Images/Activities/BushPub.jpg'));
+    this.Activities.push(new SwiperImage('Furious Dancing!', '/assets/Images/Activities/Dancing.jpg'));
+    this.Activities.push(new SwiperImage('Drumming Collaborations', '/assets/Images/Activities/Drumming.jpg'));
+    this.Activities.push(new SwiperImage('Epic Food Market', '/assets/Images/Activities/Food.jpg'));
+    this.Activities.push(new SwiperImage('Friendly environment', '/assets/Images/Activities/Friendship.jpg'));
+    this.Activities.push(new SwiperImage('Gifts Of Gaia', '/assets/Images/Activities/GOG_market.jpg'));
+    this.Activities.push(new SwiperImage('Live Music Collaborations', '/assets/Images/Activities/Live-Collaboration.jpg'));
+    this.Activities.push(new SwiperImage('Meditation Workshops', '/assets/Images/Activities/Meditation.jpg'));
+    this.Activities.push(new SwiperImage('Sweat-lodge Facilitation', '/assets/Images/Activities/SweatLodge.jpg'));
+
   }
 
 }
