@@ -908,6 +908,10 @@ $danceDuration: 0.82s cubic-bezier(.36, .07, .19, .97);
   padding: 30px 40px;
   background-color: rgb(202, 171, 95);
 
+  .content-container {
+    padding: 20px 0;
+  }
+
   h3 {
     text-align: center;
     font-family: 'Volstead';
@@ -1014,4 +1018,18 @@ $danceDuration: 0.82s cubic-bezier(.36, .07, .19, .97);
 .swiper-slide {
   background-position: center;
   background-size: cover;
+}
+
+
+@media screen and (max-width: 400px) {
+
+  ::ng-deep {
+    .swiper-container {
+  
+      width: 300px;
+      height: 400px;
+  
+    }
+  }
+
 }
